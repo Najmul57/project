@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+    <!-- header start-->
+    <header>
+        <section>
+            <div class="top-header">
+                <div class="container">
+                    <h6 class="rules"><b> Notice</b></h6>
+                    <div>
+                        <marquee behavior="" direction="">সাইটের RULES না পড়ে কেউ এজেন্ট হবেন না,রুলসের বাইরে কোন কাজ
+                            করলে সেটার দায়ভার আপনাকে বহন করতে হবেই,তখন অজুহাত দেখিয়ে কোন লাভ হবে না। লিস্টের বাইরে
+                            লেনদেন করে ধরা খেলে, BAJIFAIR দায়ি নয়</marquee>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu-bar">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-4">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 d-none d-lg-block text-center">
+                            <nav>
+                                <div class="main_menu d-flex justify-content-center">
+                                    <ul class="d-flex gap-3">
+                                        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                                        <li><a href="admin.html"><i class="fa fa-user"></i> Admin</a></li>
+                                        <li><a href="subadmin.html"><i class="fa fa-user"></i> Sub Admin</a></li>
+                                        <li><a href="super.html"><i class="fa fa-user"></i> Super</a></li>
+                                        <li><a href="master.html"><i class="fa fa-user"></i> Master</a></li>
+                                        <li><a href="support.html"><i class="fa-solid fa-sliders"></i> Support</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-lg-2 col-8 d-flex align-items-center gap-3 justify-content-end">
+                            <button id="toggleButton"><i class="fa-regular fa-moon"></i></button>
+                            <div class="search text-end">
+                                <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#agentSearch"><i
+                                        class="fa fa-search"></i>
+                                    Search Agent</button>
+                            </div>
+                            <div class="bars  d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                role="button" aria-controls="offcanvasExample">
+                                <i class="fa fa-bars"></i>
+                            </div>
+
+                            <!-- mobile menu -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu Bar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <nav>
+                                        <div class="main_menu">
+                                            <ul>
+                                                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                                                <li><a href="admin.html"><i class="fa fa-user"></i> Admin</a></li>
+                                                <li><a href="subadmin.html"><i class="fa fa-user"></i> Sub Admin</a>
+                                                </li>
+                                                <li><a href="super.html"><i class="fa fa-user"></i> Super</a></li>
+                                                <li><a href="master.html"><i class="fa fa-user"></i> Master</a></li>
+                                                <li><a href="support.html"><i class="fa-solid fa-sliders"></i>
+                                                        Support</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <!-- agent search modal -->
+                            <div class="modal fade" id="agentSearch" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Search Agent </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form action="">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="type"><b>Type</b></label>
+                                                    <select name="type" id="type" class="form-select">
+                                                        <option value="all">All</option>
+                                                        <option value="admin">Admin</option>
+                                                        <option value="superagent">Super Agent</option>
+                                                        <option value="masteragent">Master Agent</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <label for="agent"><b>Search By Agent ID</b></label>
+                                                    <input type="text" id="agent" placeholder="Agent ID Number"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <label for="whatsapp"><b>Search By WhatsApp</b></label>
+                                                    <input type="text" id="whatsapp" placeholder="WhatsApp Number"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn">Save changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <!-- header end-->
+
+    <!-- main content start -->
+    <main>
+
+        <!-- quick master agent start -->
+        <section>
+            <div class="quick-master-agent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+                            <div class="agent-content p-2 rounded">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <b class="h5">Quick master agent number</b>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between">
+                                        <h6>Master Agent</h6>
+                                        <div class="agent_id">ID : 106</div>
+                                        <div class="agent_number">
+                                            971565908370 <br>
+                                            <div class="text-center">
+                                                <span>WhatsApp</span>
+                                            </div>
+                                        </div>
+                                        <div class="agent_btn">
+                                            <button class="btn btn-sm"><a class="text-white"
+                                                    href="https://wa.me/+8801937563157"
+                                                    title="WhatsApp : +8801937563157"
+                                                    target="_blank">Message</a></button>
+                                            <button class="btn btn-sm btn-danger">Report</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- quick master agent end -->
+
+        <!-- agent system start -->
+        <section>
+            <div class="agent_system pt-4">
+                <div class="container">
+                    <div class="row g-2">
+                        <div class="col-lg-8">
+                            <div class="agent-content p-2 rounded">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <b class="h5">এজেন্ট কয় প্রকারঃ</b>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between">
+                                        <div class="single_agent text-center">
+                                            <h6>অনলাইন সুপার এজেন্ট লিস্টঃ</h6>
+                                            <p>সুপার এজেন্ট রা, ইউজার একাউন্ট এবং মাষ্টার এজেন্ট একাউন্ট খুলে দিতে
+                                                পারেন। কোন সুপার এজেন্ট এর নামে অভিযোগ থাকলে সরাসরি এডমিন কে জানাতে হবে।
+                                            </p>
+                                            <a href="super.html" class="btn btn-sm  btn-danger">Report</a>
+                                        </div>
+                                        <div class="single_agent text-center">
+                                            <h6>অনলাইন মাষ্টার এজেন্ট লিস্টঃ</h6>
+                                            <p>সুপার এজেন্ট রা, ইউজার একাউন্ট এবং মাষ্টার এজেন্ট একাউন্ট খুলে দিতে
+                                                পারেন। কোন সুপার এজেন্ট এর নামে অভিযোগ থাকলে সরাসরি এডমিন কে জানাতে হবে।
+                                            </p>
+                                            <a href="master.html" class="btn btn-sm btn-danger ">Report</a>
+                                        </div>
+                                        <div class="single_agent text-center">
+                                            <h6>লোকাল সুপার এজেন্ট লিস্টঃ</h6>
+                                            <p>সুপার এজেন্ট রা, ইউজার একাউন্ট এবং মাষ্টার এজেন্ট একাউন্ট খুলে দিতে
+                                                পারেন। কোন সুপার এজেন্ট এর নামে অভিযোগ থাকলে সরাসরি এডমিন কে জানাতে হবে।
+                                            </p>
+                                            <a href="admin.html" class="btn btn-sm btn-danger ">Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="agent-content p-2 rounded">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <b class="h5">এজেন্ট লিস্টঃ</b>
+                                    </div>
+                                    <div class="card-body single_agent">
+                                        <p>একাউন্ট খুলতে নিম্বের অনলাইন এজেন্ট লিস্ট এ ক্লিক করুন। এজেন্ট লিষ্ট এর
+                                            এজেন্ট দের সাথে ইউজার দের শুধু মাত্র হোয়াটসাপ এর মাধ্যমে যোগাযোগ করতে হবে।
+                                            হোয়াটসাপ ছাড়া অন্য কোন মাধ্যমে যোগাযোগ করলে বা লেনদেন করলে তা গ্রহনযোগ্য
+                                            হবে না। হোয়াটসাপ এ যোগাযোগ করতে হলে এজেন্ট লিস্টে হোয়াটসাপ আইকন উপরে ক্লিক
+                                            করুন অথবা ফোন নাম্বার টি মোবাইলে সেভ করে তাকে হোয়াটসাপ এ মসেজ পাঠাতে
+                                            পারবেন। হোয়াটসাপ এপ টি আপনার মোবাইলে আগে থেকেই থাকতে হবে। না থাকলে গুগুল
+                                            প্লে থেকে ইন্সটল করে নিন। </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- agent system end -->
+
+        <!-- account opening start -->
+        <section>
+            <div class="accouont-opening pt-3 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 d-flex">
+                            <div class="agent-content p-2 rounded card flex-fill d-flex flex-column">
+                                <div class="card-header text-center">
+                                    <b class="h5">কিভাবে একাউন্ট খুলবেনঃ</b>
+                                </div>
+                                <div class="card-body single_agent">
+                                    <p>Bajifair- এ একাউন্ট করতে হলে আপনার এজেন্ট এর মাধ্যমে একাউন্ট খুলতে হবে। এজেন্ট এর
+                                        মাধ্যমেই টাকা ডিপোজিট এবং উইথড্র করতে হবে। আপনি যে এজেন্ট এর কাছ থেকে একাউন্ট
+                                        খুলবেন তার সাথেই সব সময় লেনদেন করতে হবে। ঠিক কোন এজেন্ট কে টাকা দিবেন এবং
+                                        কিভাবে তার সাথে লেনদেন করবেন তার বুঝতে হলে আপনার নিম্বের তথ্য গুলো পড়া জরুরী।
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="agent-content p-2 rounded card flex-fill d-flex flex-column">
+                                <div class="card-header text-center">
+                                    <b class="h5">Bajifair এর নতুন সব আপডেট</b>
+                                </div>
+                                <div class="card-body single_agent">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- account opening end -->
+
+    </main>
+    <!-- main content end -->
+
+    <!-- footer start -->
+        <footer class="mt-5">
+        <div class="container">
+          <div class="footer-area p-2 d-flex align-items-center justify-content-between">
+            <div>
+                <a class="rules_btn" title="আমাদের নিয়মনীতি" href="rules.html" target="_blank">Rules</a>
+            </div>
+            <div>
+                <h6>ফেসবুকে আমরা <a href="" style="margin-left: 10px;"><i title="ফেসবুকে আমরা" class="fab fa-facebook-f"></i></a></h6>
+            </div>
+          </div>
+        </div>
+     </footer>
+    <!-- footer end -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

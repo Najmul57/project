@@ -1,0 +1,42 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .main_menu ul li a {
+        padding: 5px;
+    }
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .top-header .container {
+        padding: 0;
+    }
+
+    .card-body {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .agent_btn {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 450px
+    }
+
+}
